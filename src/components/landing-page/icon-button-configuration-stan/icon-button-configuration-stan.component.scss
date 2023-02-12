@@ -1,0 +1,56 @@
+:host,
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  flex-shrink: 0;
+  text-decoration: none;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+:host,
+:not(span, a, ul, ol, li, p) {
+  display: flex;
+}
+
+ul,
+ol {
+  text-indent: 0;
+  padding-inline-start: 1.5em;
+}
+
+p:empty::before {
+  content: '';
+  display: inline-block;
+}
+
+img {
+  object-fit: contain;
+}
+
+svg {
+  overflow: visible;
+}
+
+:host {
+  width: 48px;
+  height: 48px;
+  flex-direction: column;
+  place-content: center;
+  align-items: center;
+}
+.container {
+  width: min-content;
+  height: min-content;
+  border-radius: 100px;
+  overflow: hidden;
+  &__stateLayer {
+    width: min-content;
+    height: min-content;
+    align-self: flex-start;
+    padding: 8px;
+  }
+}
